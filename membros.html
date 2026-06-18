@@ -194,9 +194,22 @@
     </div>
   </footer>
 
-  <script src="js/membros.js?v=3"></script>
   <script>
-    // Override do formMembro para usar a API
+    // Scroll animations — roda antes de tudo
+    (function() {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var siblings = entry.target.parentElement.querySelectorAll('.fade-up');
+            siblings.forEach(function(el, idx) { setTimeout(function(){ el.classList.add('visible'); }, idx * 120); });
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.fade-up').forEach(function(el) { obs.observe(el); });
+    })();
+
+    // Formulário de membresia → API
     (function() {
       var form = document.getElementById('formMembro');
       var mSuccess = document.getElementById('m-success');
@@ -232,5 +245,6 @@
       }, true);
     })();
   </script>
+  <script src="js/membros.js?v=4"></script>
 </body>
 </html>
