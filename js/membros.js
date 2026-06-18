@@ -177,28 +177,20 @@ formMembro.addEventListener('submit', async (e) => {
   setLoading(mBtn, mSpinner, mBtnLabel, true);
 
   try {
-    await emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_MEMBRO, {
-      nome,
-      email,
-      telefone:  tel || 'Não informado',
-      frequenta,
-      mensagem:  msg || 'Nenhuma mensagem adicional.',
-      igreja_email: 'contato@igrejamais500.com.br',
-      igreja_nome:  'Igreja Batista +500',
+    const res = await fetch('https://web-production-e80563.up.railway.app/interessados', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome, email, telefone: tel || null, frequenta, mensagem: msg || null }),
     });
+
+    if (!res.ok) throw new Error('Erro ao enviar');
 
     formMembro.style.display = 'none';
     mSuccess.classList.remove('hidden');
 
   } catch (err) {
-    // Fallback: simula sucesso quando EmailJS não está configurado
-    if (EJS_PUBLIC_KEY === 'SUA_PUBLIC_KEY') {
-      formMembro.style.display = 'none';
-      mSuccess.classList.remove('hidden');
-    } else {
-      showError(mError, 'Ocorreu um erro ao enviar. Tente novamente ou ligue para (11) 99999-9999.');
-      setLoading(mBtn, mSpinner, mBtnLabel, false);
-    }
+    showError(mError, 'Ocorreu um erro ao enviar. Tente novamente.');
+    setLoading(mBtn, mSpinner, mBtnLabel, false);
   }
 });
 
