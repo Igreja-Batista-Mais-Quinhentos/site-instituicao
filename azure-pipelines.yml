@@ -18,10 +18,10 @@ pool:
 
 variables:
   deployFolder: '$(Build.SourcesDirectory)'
-  ftpServer: 'ftp://SEU_HOST_OU_IP'
+  ftpServer: 'ftp://69.6.213.26'
   ftpUser: '$(FTP_USERNAME)'
   ftpPassword: '$(FTP_PASSWORD)'
-  ftpRemoteDir: '/public_html'
+  ftpRemoteDir: '/mais500.com.br'
 
 stages:
 - stage: ValidatePR
