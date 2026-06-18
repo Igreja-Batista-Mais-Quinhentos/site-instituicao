@@ -1,0 +1,62 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+    - main
+
+pr:
+  branches:
+    include:
+    - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  deployFolder: '$(Build.SourcesDirectory)'
+  ftpServer: 'ftp://SEU_HOST_OU_IP'
+  ftpUser: '$(FTP_USERNAME)'
+  ftpPassword: '$(FTP_PASSWORD)'
+  ftpRemoteDir: '/public_html'
+
+stages:
+- stage: ValidatePR
+  displayName: 'Validar Pull Request'
+  jobs:
+  - job: Validate
+    displayName: 'Checagens do PR'
+    steps:
+    - checkout: self
+
+    - script: |
+        echo "Validando arquivos do projeto"
+        ls -la
+      displayName: 'Validar estrutura'
+
+- stage: Deploy
+  displayName: 'Deploy HostGator'
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  jobs:
+  - job: UploadFiles
+    displayName: 'Enviar arquivos por FTP'
+    steps:
+    - checkout: self
+
+    - task: FtpUpload@2
+      displayName: 'Upload para HostGator'
+      inputs:
+        credentialsOption: 'inputs'
+        serverUrl: '$(ftpServer)'
+        username: '$(ftpUser)'
+        password: '$(ftpPassword)'
+        rootDirectory: '$(deployFolder)'
+        filePatterns: '**'
+        remoteDirectory: '$(ftpRemoteDir)'
+        clean: false
+        cleanContents: false
+        preservePaths: true
+        trustSSL: true
