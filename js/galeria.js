@@ -44,15 +44,12 @@ navMenu.querySelectorAll('.navbar__link').forEach(link => {
 // DADOS — GALERIA DE FOTOS
 // ========================
 const fotos = [
-  { label: 'Culto de Domingo',       gradient: 'linear-gradient(135deg,#0B5CAC,#1D2023)' },
-  { label: 'Louvor & Adoração',      gradient: 'linear-gradient(135deg,#FB62A2,#7f1d1d)' },
-  { label: 'Encontro de Jovens',     gradient: 'linear-gradient(135deg,#7c3aed,#1D2023)' },
-  { label: 'Ação Social',            gradient: 'linear-gradient(135deg,#065f46,#1D2023)' },
-  { label: 'Batismo nas Águas',      gradient: 'linear-gradient(135deg,#1a1a2e,#0f3460)' },
-  { label: 'Natal da Igreja',        gradient: 'linear-gradient(135deg,#b45309,#1D2023)' },
-  { label: 'Semana de Oração',       gradient: 'linear-gradient(135deg,#0B5CAC,#065f46)' },
-  { label: 'Culto de Casais',        gradient: 'linear-gradient(135deg,#FB62A2,#0B5CAC)' },
-  { label: 'Escola Bíblica',         gradient: 'linear-gradient(135deg,#4183C5,#1D2023)' },
+  { label: 'Santa Ceia',             gradient: 'linear-gradient(135deg,#0B5CAC,#1D2023)', src: 'assets/galeria-santa-ceia.jpg' },
+  { label: 'Louvor & Adoração',      gradient: 'linear-gradient(135deg,#FB62A2,#7f1d1d)', src: 'assets/galeria-louvor.jpg', pos: 'center 15%' },
+  { label: 'Encontro de Jovens',     gradient: 'linear-gradient(135deg,#7c3aed,#1D2023)', src: 'assets/galeria-jovens.jpg' },
+  { label: 'Batismo nas Águas',      gradient: 'linear-gradient(135deg,#1a1a2e,#0f3460)', src: 'assets/galeria-batismo.jpg' },
+  { label: 'Semana de Oração',       gradient: 'linear-gradient(135deg,#0B5CAC,#065f46)', src: 'assets/galeria-oracao.jpg' },
+  { label: 'Culto de Casais',        gradient: 'linear-gradient(135deg,#FB62A2,#0B5CAC)', src: 'assets/galeria-casais.jpg', pos: 'center 20%' },
 ];
 
 // ========================
@@ -189,10 +186,14 @@ function closeLightbox() {
 
 function renderLightbox() {
   const f = fotos[lbIndex];
-  lbImg.innerHTML = `
-    <div style="position:absolute;inset:0;background:${f.gradient};"></div>
-    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.2);">${cameraIcon.replace('viewBox', 'width="72" height="72" viewBox')}</div>
-  `;
+  if (f.src) {
+    lbImg.innerHTML = `<div style="position:absolute;inset:0;background:url('${f.src}') ${f.pos || 'center'}/cover no-repeat;"></div>`;
+  } else {
+    lbImg.innerHTML = `
+      <div style="position:absolute;inset:0;background:${f.gradient};"></div>
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.2);">${cameraIcon.replace('viewBox', 'width="72" height="72" viewBox')}</div>
+    `;
+  }
   lbCaption.textContent = `${f.label} — ${lbIndex + 1} / ${fotos.length}`;
 }
 
@@ -218,10 +219,14 @@ document.addEventListener('keydown', e => {
 // RENDER FOTO CARD
 // ========================
 function renderFotoCard(foto, idx) {
+  const pos = foto.pos || 'center center';
+  const bg = foto.src
+    ? `background:${foto.gradient};` + `background-image:url('${foto.src}');background-size:cover;background-position:${pos};`
+    : `background:${foto.gradient};`;
   return `
     <div class="foto-card" data-idx="${idx}" tabindex="0" role="button" aria-label="Abrir foto: ${foto.label}">
-      <div class="foto-card__bg" style="background:${foto.gradient};"></div>
-      <div class="foto-card__cam">${cameraIcon}</div>
+      <div class="foto-card__bg" style="${bg}"></div>
+      ${!foto.src ? `<div class="foto-card__cam">${cameraIcon}</div>` : ''}
       <div class="foto-card__overlay">
         <span class="foto-card__label">${foto.label}</span>
       </div>

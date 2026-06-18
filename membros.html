@@ -39,129 +39,9 @@
   <section class="page-hero">
     <div class="page-hero__bg"></div>
     <div class="page-hero__content">
-      <span class="section__label section__label--light">Tela 3</span>
-      <h1 class="page-hero__title">Visita & Membresia</h1>
-      <p class="page-hero__sub">Agende sua primeira visita ou dê o próximo passo e faça parte da nossa família.</p>
-    </div>
-  </section>
-
-  <!-- AGENDAR VISITA -->
-  <section class="section visita-section" id="visita">
-    <div class="container">
-      <div class="visita-grid">
-
-        <!-- COLUNA ESQUERDA — texto -->
-        <div class="visita-info fade-up">
-          <span class="section__label">Venha nos conhecer</span>
-          <h2 class="section__title" style="text-align:left;">Agende sua<br/>Visita</h2>
-          <p class="visita-info__sub">
-            Você é muito bem-vindo! Preencha o formulário e enviaremos uma confirmação no seu e-mail com todos os detalhes do seu horário.
-          </p>
-
-          <ul class="visita-info__list">
-            <li>
-              <div class="visita-info__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div>
-                <strong>Domingos</strong>
-                <span>9h · 11h · 18h</span>
-              </div>
-            </li>
-            <li>
-              <div class="visita-info__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div>
-                <strong>Quarta-feira</strong>
-                <span>19h30</span>
-              </div>
-            </li>
-            <li>
-              <div class="visita-info__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div>
-                <strong>Sexta-feira</strong>
-                <span>19h30</span>
-              </div>
-            </li>
-            <li>
-              <div class="visita-info__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <strong>Endereço</strong>
-                <span>Rua dos Passos, 185 — Taubaté, SP</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- COLUNA DIREITA — formulário -->
-        <div class="form-card fade-up">
-          <!-- Estado padrão: formulário -->
-          <form id="formVisita" class="form" novalidate>
-            <div class="form__row">
-              <div class="form__group">
-                <label class="form__label" for="v-nome">Nome completo *</label>
-                <input class="form__input" type="text" id="v-nome" name="nome" placeholder="Seu nome" required />
-              </div>
-            </div>
-            <div class="form__row form__row--2">
-              <div class="form__group">
-                <label class="form__label" for="v-email">E-mail *</label>
-                <input class="form__input" type="email" id="v-email" name="email" placeholder="seu@email.com" required />
-              </div>
-              <div class="form__group">
-                <label class="form__label" for="v-tel">WhatsApp</label>
-                <input class="form__input" type="tel" id="v-tel" name="telefone" placeholder="(11) 99999-9999" />
-              </div>
-            </div>
-            <div class="form__row form__row--2">
-              <div class="form__group">
-                <label class="form__label" for="v-data">Data preferida *</label>
-                <input class="form__input" type="date" id="v-data" name="data" required />
-              </div>
-              <div class="form__group">
-                <label class="form__label" for="v-horario">Horário *</label>
-                <select class="form__input form__select" id="v-horario" name="horario" required>
-                  <option value="" disabled selected>Selecione</option>
-                  <optgroup label="Domingo">
-                    <option value="Domingo 9h">Domingo — 9h</option>
-                    <option value="Domingo 11h">Domingo — 11h</option>
-                    <option value="Domingo 18h">Domingo — 18h</option>
-                  </optgroup>
-                  <optgroup label="Meio de semana">
-                    <option value="Quarta 19h30">Quarta-feira — 19h30</option>
-                    <option value="Sexta 19h30">Sexta-feira — 19h30</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="v-msg">Mensagem (opcional)</label>
-              <textarea class="form__input form__textarea" id="v-msg" name="mensagem" placeholder="Algo que queira nos contar antecipadamente…" rows="3"></textarea>
-            </div>
-            <div class="form__error" id="v-error" aria-live="polite"></div>
-            <button type="submit" class="btn btn--primary btn--full" id="v-btn">
-              <span id="v-btn-label">Agendar Visita</span>
-              <svg id="v-spinner" class="form__spinner hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-            </button>
-          </form>
-
-          <!-- Estado sucesso -->
-          <div class="form-success hidden" id="v-success">
-            <div class="form-success__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h3>Visita Agendada!</h3>
-            <p>Enviamos a confirmação para <strong id="v-success-email"></strong>. Estamos ansiosos para receber você!</p>
-            <button class="btn btn--outline" onclick="resetVisita()">Fazer outro agendamento</button>
-          </div>
-        </div>
-
-      </div>
+      <span class="section__label section__label--light">Faça parte</span>
+      <h1 class="page-hero__title">Membresia</h1>
+      <p class="page-hero__sub">Dê o próximo passo e faça parte da nossa família de fé.</p>
     </div>
   </section>
 
@@ -298,7 +178,6 @@
         <div class="footer__links">
           <h4>Membros</h4>
           <ul>
-            <li><a href="#visita">Agendar Visita</a></li>
             <li><a href="#membresia">Membresia</a></li>
           </ul>
         </div>
