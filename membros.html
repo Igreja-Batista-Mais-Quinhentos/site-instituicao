@@ -195,5 +195,42 @@
   </footer>
 
   <script src="js/membros.js?v=3"></script>
+  <script>
+    // Override do formMembro para usar a API
+    (function() {
+      var form = document.getElementById('formMembro');
+      var mSuccess = document.getElementById('m-success');
+      var mError = document.getElementById('m-error');
+      var mBtn = document.getElementById('m-btn');
+      if (!form) return;
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        if (mError) mError.textContent = '';
+        var nome = document.getElementById('m-nome').value.trim();
+        var email = document.getElementById('m-email').value.trim();
+        if (!nome) { if (mError) mError.textContent = 'Por favor, informe seu nome.'; return; }
+        if (!email || !email.includes('@')) { if (mError) mError.textContent = 'E-mail inválido.'; return; }
+        var tel = document.getElementById('m-tel').value.trim();
+        var checked = document.querySelector('input[name="frequenta"]:checked');
+        var frequenta = checked ? checked.value : 'Não informado';
+        var msg = document.getElementById('m-msg').value.trim();
+        if (mBtn) mBtn.disabled = true;
+        try {
+          var res = await fetch('https://web-production-e80563.up.railway.app/interessados', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nome: nome, email: email, telefone: tel || null, frequenta: frequenta, mensagem: msg || null })
+          });
+          if (!res.ok) throw new Error('Erro');
+          form.style.display = 'none';
+          if (mSuccess) mSuccess.classList.remove('hidden');
+        } catch(err) {
+          if (mError) mError.textContent = 'Ocorreu um erro ao enviar. Tente novamente.';
+          if (mBtn) mBtn.disabled = false;
+        }
+      }, true);
+    })();
+  </script>
 </body>
 </html>
