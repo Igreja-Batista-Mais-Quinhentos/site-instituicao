@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Igreja Batista +500</title>
+  <meta name="description" content="Igreja Batista +500 — Uma comunidade de fé, esperança e amor." />
+  <link rel="icon" type="image/svg+xml" href="assets/isotipo-light.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/depth.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__container">
+      <a href="#hero" class="navbar__logo">
+        <img src="assets/logo-horizontal-light.svg" alt="Igreja Batista +500" class="navbar__logo-img" />
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#sobre" class="navbar__link">Sobre</a>
+        <a href="#cultos" class="navbar__link">Cultos</a>
+        <a href="#ministerios" class="navbar__link">Ministérios</a>
+        <a href="#eventos" class="navbar__link">Eventos</a>
+        <a href="#doacoes" class="navbar__link">Doações</a>
+        <a href="galeria.html" class="navbar__link">Galeria</a>
+        <a href="membros.html" class="navbar__link">Membros</a>
+        <a href="#contato" class="navbar__link navbar__link--cta">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <img src="assets/logo-light.svg" alt="Igreja Batista +500" class="hero__logo fade-up" style="--i:0" />
+      <p class="hero__tagline fade-up" style="--i:1">Uma comunidade movida pela fé,<br />transformada pelo amor de Deus.</p>
+      <div class="hero__actions fade-up" style="--i:2">
+        <a href="#cultos" class="btn btn--primary">Nossos Cultos</a>
+        <a href="#sobre" class="btn btn--outline">Conheça a Igreja</a>
+      </div>
+    </div>
+    <div class="hero__photo-bg">
+      <img src="assets/hero-pastores.png" alt="" />
+    </div>
+    <div class="hero__photo-card">
+      <img src="assets/hero-culto.jpg" alt="" />
+    </div>
+    <div class="hero__scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <div class="sobre__grid">
+        <div class="sobre__text fade-left">
+          <span class="section__label">Quem somos</span>
+          <h2 class="section__title">Uma igreja que acredita<br />no poder da palavra</h2>
+          <p>Somos a Igreja Batista +500, uma comunidade cristã comprometida com o ensino bíblico, o discipulado e o amor ao próximo. Nossa missão é ver vidas transformadas pelo evangelho de Jesus Cristo.</p>
+          <p>Com uma história de fé e crescimento, seguimos firmes no propósito de alcançar mais pessoas com a mensagem de esperança que só Cristo pode oferecer.</p>
+          <a href="#contato" class="btn btn--primary">Venha nos visitar</a>
+        </div>
+        <div class="sobre__icons">
+          <div class="sobre__icon-card zoom-in" style="--i:0">
+            <img src="assets/icons/heisrisen.png" alt="Cristo ressuscitado" />
+            <h3>Fé em Cristo</h3>
+            <p>Cremos na morte e ressurreição de Jesus como fundamento da nossa salvação.</p>
+          </div>
+          <div class="sobre__icon-card zoom-in" style="--i:1">
+            <img src="assets/icons/crownofthorns.png" alt="Coroa de espinhos" />
+            <h3>Graça e Amor</h3>
+            <p>O sacrifício de Cristo nos move a amar a Deus e ao próximo com todo o coração.</p>
+          </div>
+          <div class="sobre__icon-card zoom-in" style="--i:2">
+            <img src="assets/icons/river.png" alt="Rio da vida" />
+            <h3>Vida Nova</h3>
+            <p>Através do batismo e da palavra, somos renovados e chamados a uma vida plena.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASTORES -->
+  <section class="section pastores" id="pastores">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Nossa Liderança</span>
+        <h2 class="section__title">Conheça nossos Pastores</h2>
+        <p class="section__subtitle">Servos de Deus comprometidos com a palavra, com a família e com cada membro desta comunidade.</p>
+      </div>
+      <div class="pastores__grid">
+
+        <div class="pastores__card flip-in" style="--i:0">
+          <div class="pastores__foto">
+            <img src="assets/pastor-edgar.jpg" alt="Pastor Edgar" />
+          </div>
+          <div class="pastores__info">
+            <span class="pastores__cargo">Pastor Titular</span>
+            <h3 class="pastores__nome">Pastor Edgar</h3>
+            <p class="pastores__bio">Líder comprometido com o ensino bíblico e o crescimento espiritual da igreja. Apaixonado por discipulado e por ver vidas transformadas pelo poder do evangelho.</p>
+            <div class="pastores__social">
+              <a href="#" class="social-btn" aria-label="Instagram do Pastor Edgar">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pastores__card flip-in" style="--i:1">
+          <div class="pastores__foto">
+            <img src="assets/pastora-amanda.jpg" alt="Pastora Amanda" />
+          </div>
+          <div class="pastores__info">
+            <span class="pastores__cargo">Pastora</span>
+            <h3 class="pastores__nome">Pastora Amanda</h3>
+            <p class="pastores__bio">Dedicada ao ministério de mulheres, casais e família. Seu coração é servir com amor e acolher cada pessoa que chega à igreja com a graça e a ternura de Cristo.</p>
+            <div class="pastores__social">
+              <a href="#" class="social-btn" aria-label="Instagram da Pastora Amanda">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTOS -->
+  <section class="section cultos" id="cultos">
+    <div class="cultos__bg"></div>
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label section__label--light">Venha nos visitar</span>
+        <h2 class="section__title section__title--light">Nossos Cultos</h2>
+      </div>
+
+
+
+      <div class="cultos__grid">
+        <div class="cultos__card zoom-in" style="--i:0">
+          <div class="cultos__dia">Domingo</div>
+          <div class="cultos__nome">Culto de Celebração</div>
+          <div class="cultos__horario">9h00 · 11h00 · 18h00</div>
+          <p class="cultos__desc">Adoração, pregação da palavra e comunhão. Toda a família é bem-vinda.</p>
+        </div>
+        <div class="cultos__card zoom-in" style="--i:1">
+          <div class="cultos__dia">Quarta-feira</div>
+          <div class="cultos__nome">Culto de Oração</div>
+          <div class="cultos__horario">19h30</div>
+          <p class="cultos__desc">Um momento especial de oração, intercessão e aprofundamento na palavra.</p>
+        </div>
+        <div class="cultos__card zoom-in" style="--i:2">
+          <div class="cultos__dia">Sexta-feira</div>
+          <div class="cultos__nome">Grupos de Célula</div>
+          <div class="cultos__horario">19h30 — 21h00</div>
+          <p class="cultos__desc">Comunhão em pequenos grupos espalhados pela cidade. Encontre um grupo perto de você.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINISTÉRIOS -->
+  <section class="section ministerios" id="ministerios">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Servindo juntos</span>
+        <h2 class="section__title">Ministérios</h2>
+      </div>
+      <!-- GRID DE CARDS -->
+      <div class="ministerios__grid" id="minGrid"></div>
+
+      <!-- MODAL -->
+      <div class="min-modal" id="minModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="min-modal__backdrop" id="minBackdrop"></div>
+        <div class="min-modal__box" id="minBox">
+          <button class="min-modal__close" id="minClose" aria-label="Fechar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <div class="min-modal__content" id="minModalContent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section class="section eventos" id="eventos">
+    <div class="eventos__bg"></div>
+    <div class="container">
+      <div class="section__header fade-up">
+        <span class="section__label section__label--light">Agenda</span>
+        <h2 class="section__title section__title--light">Próximos Eventos</h2>
+      </div>
+      <div class="eventos__list">
+        <div class="eventos__item fade-right" style="--i:0">
+          <div class="eventos__data">
+            <span class="eventos__dia">15</span>
+            <span class="eventos__mes">Jun</span>
+          </div>
+          <div class="eventos__info">
+            <h3>Retiro de Jovens 2026</h3>
+            <p>Um fim de semana de renovação espiritual, comunhão e muito louvor.</p>
+            <span class="eventos__local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Chácara da Família · 15–17 de Junho</span>
+          </div>
+        </div>
+        <div class="eventos__item fade-right" style="--i:1">
+          <div class="eventos__data">
+            <span class="eventos__dia">22</span>
+            <span class="eventos__mes">Jun</span>
+          </div>
+          <div class="eventos__info">
+            <h3>Conferência de Mulheres</h3>
+            <p>Tarde de encorajamento, palavra e adoração para todas as mulheres da igreja.</p>
+            <span class="eventos__local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Templo Central · 14h00</span>
+          </div>
+        </div>
+        <div class="eventos__item fade-right" style="--i:2">
+          <div class="eventos__data">
+            <span class="eventos__dia">06</span>
+            <span class="eventos__mes">Jul</span>
+          </div>
+          <div class="eventos__info">
+            <h3>Batismos</h3>
+            <p>Celebre conosco esse passo de fé de novos membros da nossa família.</p>
+            <span class="eventos__local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Templo Central · Culto da manhã</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOAÇÕES -->
+  <section class="section doacoes" id="doacoes">
+    <div class="container">
+      <div class="doacoes__grid">
+        <div class="doacoes__text fade-left">
+          <span class="section__label">Contribua</span>
+          <h2 class="section__title">Sua oferta<br />transforma vidas</h2>
+          <p>Cada dízimo e oferta é um ato de fé que move o Reino de Deus. Sua contribuição sustenta ministérios, missões e o cuidado às famílias da nossa comunidade.</p>
+          <blockquote class="doacoes__verse">
+            <p>"Cada um contribua conforme determinou em seu coração, não com relutância ou por obrigação, pois Deus ama quem dá com alegria."</p>
+            <cite>2 Coríntios 9:7</cite>
+          </blockquote>
+          <div class="doacoes__pix">
+            <span class="doacoes__pix-label">Chave Pix</span>
+            <div class="doacoes__pix-row">
+              <code id="pix-key">contato@igrejamais500.com.br</code>
+              <button class="btn btn--primary doacoes__copy-btn" onclick="copyPix()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span id="copy-label">Copiar chave</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="doacoes__qr fade-right">
+          <div class="doacoes__qr-box">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="doacoes__qr-icon">
+              <rect x="10" y="10" width="30" height="30" rx="3" stroke="currentColor" stroke-width="4"/>
+              <rect x="17" y="17" width="16" height="16" fill="currentColor"/>
+              <rect x="60" y="10" width="30" height="30" rx="3" stroke="currentColor" stroke-width="4"/>
+              <rect x="67" y="17" width="16" height="16" fill="currentColor"/>
+              <rect x="10" y="60" width="30" height="30" rx="3" stroke="currentColor" stroke-width="4"/>
+              <rect x="17" y="67" width="16" height="16" fill="currentColor"/>
+              <rect x="60" y="60" width="8" height="8" fill="currentColor"/>
+              <rect x="74" y="60" width="8" height="8" fill="currentColor"/>
+              <rect x="60" y="74" width="8" height="8" fill="currentColor"/>
+              <rect x="74" y="74" width="8" height="8" fill="currentColor"/>
+              <rect x="45" y="10" width="8" height="8" fill="currentColor"/>
+              <rect x="45" y="24" width="8" height="8" fill="currentColor"/>
+              <rect x="10" y="45" width="8" height="8" fill="currentColor"/>
+              <rect x="24" y="45" width="8" height="8" fill="currentColor"/>
+              <rect x="45" y="45" width="8" height="8" fill="currentColor"/>
+            </svg>
+            <p class="doacoes__qr-hint">Substitua por seu QR Code Pix real</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section contato" id="contato">
+    <div class="container">
+      <div class="contato__grid">
+        <div class="contato__info fade-left">
+          <span class="section__label">Fale conosco</span>
+          <h2 class="section__title">Venha fazer parte<br />dessa família</h2>
+          <ul class="contato__list">
+            <li>
+              <span class="contato__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <strong>Endereço</strong>
+                <p>Rua dos Passos, 185<br />Taubaté — SP</p>
+              </div>
+            </li>
+            <li>
+              <span class="contato__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.1a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.38v-.46z"/></svg>
+              </span>
+              <div>
+                <strong>Telefone / WhatsApp</strong>
+                <p>(11) 99999-9999</p>
+              </div>
+            </li>
+            <li>
+              <span class="contato__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <div>
+                <strong>E-mail</strong>
+                <p>contato@igrejamais500.com.br</p>
+              </div>
+            </li>
+            <li>
+              <span class="contato__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <div>
+                <strong>Funcionamento</strong>
+                <p>Seg–Sex: 8h–18h<br />Dom: Cultos às 9h, 11h e 18h</p>
+              </div>
+            </li>
+          </ul>
+          <div class="contato__social">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contato__mapa fade-right">
+          <iframe
+            class="contato__mapa-iframe"
+            src="https://www.google.com/maps?q=Rua+dos+Passos,+185,+Taubaté,+SP,+Brasil&output=embed"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização Igreja Batista +500">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo-light.svg" alt="Igreja Batista +500" class="footer__logo" />
+          <p>Amando a Deus e ao próximo,<br />a cada dia.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cultos">Cultos</a></li>
+            <li><a href="#ministerios">Ministérios</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#doacoes">Doações</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Ministérios</h4>
+          <ul>
+            <li><a href="#ministerios">Louvor</a></li>
+            <li><a href="#ministerios">Kids</a></li>
+            <li><a href="#ministerios">Jovens</a></li>
+            <li><a href="#ministerios">Casais</a></li>
+            <li><a href="#ministerios">Missões</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contato</h4>
+          <p>Rua dos Passos, 185<br />Taubaté — SP</p>
+          <p>(11) 99999-9999</p>
+          <p>contato@igrejamais500.com.br</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Igreja Batista +500. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CORDA DE EZEQUIEL — medidor de profundidade por scroll -->
+  <div class="depth-meter" id="depthMeter" aria-hidden="true">
+    <div class="depth-meter__track">
+      <div class="depth-meter__fill" id="depthFill"></div>
+
+      <div class="depth-meter__mark" data-threshold="0.20" data-section="Sobre nós">
+        <div class="depth-meter__knot"></div>
+        <div class="depth-meter__tick"></div>
+        <div class="depth-meter__label">
+          <span class="depth-meter__verse">Ez 47:3</span>
+          <span class="depth-meter__depth">tornozelos</span>
+        </div>
+      </div>
+      <div class="depth-meter__mark" data-threshold="0.42" data-section="Cultos">
+        <div class="depth-meter__knot"></div>
+        <div class="depth-meter__tick"></div>
+        <div class="depth-meter__label">
+          <span class="depth-meter__verse">Ez 47:4</span>
+          <span class="depth-meter__depth">joelhos</span>
+        </div>
+      </div>
+      <div class="depth-meter__mark" data-threshold="0.63" data-section="Ministérios">
+        <div class="depth-meter__knot"></div>
+        <div class="depth-meter__tick"></div>
+        <div class="depth-meter__label">
+          <span class="depth-meter__verse">Ez 47:4</span>
+          <span class="depth-meter__depth">cintura</span>
+        </div>
+      </div>
+      <div class="depth-meter__mark" data-threshold="0.83" data-section="Doações">
+        <div class="depth-meter__knot"></div>
+        <div class="depth-meter__tick"></div>
+        <div class="depth-meter__label">
+          <span class="depth-meter__verse">Ez 47:5</span>
+          <span class="depth-meter__depth">As águas eram profundas</span>
+        </div>
+      </div>
+      <div class="depth-meter__mark" data-threshold="0.96" data-section="Fim">
+        <div class="depth-meter__knot"></div>
+        <div class="depth-meter__tick"></div>
+        <div class="depth-meter__label">
+          <span class="depth-meter__verse">Ez 47:5</span>
+          <span class="depth-meter__depth">que era necessário nadar para atravessar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="depth-meter__cursor" id="depthCursor">
+      <div class="depth-meter__ripple" id="depthRipple"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/depth.js"></script>
+</body>
+</html>

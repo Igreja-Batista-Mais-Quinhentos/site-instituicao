@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria & Equipe — Igreja Batista +500</title>
+  <meta name="description" content="Galeria de fotos e equipe de líderes da Igreja Batista +500." />
+  <link rel="icon" type="image/svg+xml" href="assets/isotipo-light.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/galeria.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logo-horizontal-light.svg" alt="Igreja Batista +500" class="navbar__logo-img" />
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__nav" id="navMenu">
+        <a href="index.html" class="navbar__link">Início</a>
+        <a href="index.html#cultos" class="navbar__link">Cultos</a>
+        <a href="index.html#ministerios" class="navbar__link">Ministérios</a>
+        <a href="index.html#eventos" class="navbar__link">Eventos</a>
+        <a href="galeria.html" class="navbar__link navbar__link--active">Galeria</a>
+        <a href="membros.html" class="navbar__link">Membros</a>
+        <a href="index.html#contato" class="navbar__link navbar__link--cta">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO PEQUENO -->
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="page-hero__photo-left"></div>
+    <div class="page-hero__photo-center"></div>
+    <div class="page-hero__photo-right"></div>
+    <div class="page-hero__content">
+      <span class="section__label section__label--light">Tela 2</span>
+      <h1 class="page-hero__title">Galeria & Equipe</h1>
+      <p class="page-hero__sub">Momentos da nossa comunidade e as pessoas que servem com dedicação.</p>
+    </div>
+  </section>
+
+  <!-- GALERIA DE FOTOS -->
+  <section class="section galeria-section" id="galeria">
+    <div class="container">
+      <div class="section__header fade-up">
+        <span class="section__label">Nossa Comunidade</span>
+        <h2 class="section__title">Galeria de Fotos</h2>
+        <p class="section__subtitle">Momentos que marcaram a história da nossa família de fé.</p>
+      </div>
+
+      <div class="carousel" id="galeriaCarousel">
+        <button class="carousel__arrow carousel__arrow--prev" id="galPrev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="galTrack"></div>
+        </div>
+        <button class="carousel__arrow carousel__arrow--next" id="galNext" aria-label="Próximo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="carousel__dots" id="galDots"></div>
+    </div>
+  </section>
+
+  <!-- EQUIPE DE LÍDERES -->
+  <section class="section equipe-section" id="equipe">
+    <div class="container">
+      <div class="section__header fade-up">
+        <span class="section__label">Servindo juntos</span>
+        <h2 class="section__title">Nossa Equipe</h2>
+        <p class="section__subtitle">Líderes comprometidos com o Reino, servindo em cada área da igreja.</p>
+      </div>
+
+      <div class="carousel" id="equipeCarousel">
+        <button class="carousel__arrow carousel__arrow--prev" id="eqPrev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="eqTrack"></div>
+        </div>
+        <button class="carousel__arrow carousel__arrow--next" id="eqNext" aria-label="Próximo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="carousel__dots" id="eqDots"></div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" id="lbBackdrop"></div>
+    <button class="lightbox__close" id="lbClose" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="lightbox__img" id="lbImg"></div>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Próximo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="lightbox__caption" id="lbCaption"></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo-light.svg" alt="Igreja Batista +500" class="footer__logo" />
+          <p>Amando a Deus e ao próximo,<br />a cada dia.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#cultos">Cultos</a></li>
+            <li><a href="index.html#ministerios">Ministérios</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="membros.html">Membros</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Galeria</h4>
+          <ul>
+            <li><a href="#galeria">Fotos</a></li>
+            <li><a href="#equipe">Nossa Equipe</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contato</h4>
+          <p>Rua dos Passos, 185<br />Taubaté — SP</p>
+          <p>(11) 99999-9999</p>
+          <p>contato@igrejamais500.com.br</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Igreja Batista +500. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/galeria.js"></script>
+</body>
+</html>

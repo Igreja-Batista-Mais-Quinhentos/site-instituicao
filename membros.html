@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visita & Membresia — Igreja Batista +500</title>
+  <meta name="description" content="Agende sua visita ou saiba como se tornar membro da Igreja Batista +500." />
+  <link rel="icon" type="image/svg+xml" href="assets/isotipo-light.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/membros.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logo-horizontal-light.svg" alt="Igreja Batista +500" class="navbar__logo-img" />
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__nav" id="navMenu">
+        <a href="index.html" class="navbar__link">Início</a>
+        <a href="index.html#cultos" class="navbar__link">Cultos</a>
+        <a href="index.html#ministerios" class="navbar__link">Ministérios</a>
+        <a href="index.html#eventos" class="navbar__link">Eventos</a>
+        <a href="galeria.html" class="navbar__link">Galeria</a>
+        <a href="membros.html" class="navbar__link navbar__link--active">Membros</a>
+        <a href="index.html#contato" class="navbar__link navbar__link--cta">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO PEQUENO -->
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="page-hero__content">
+      <span class="section__label section__label--light">Tela 3</span>
+      <h1 class="page-hero__title">Visita & Membresia</h1>
+      <p class="page-hero__sub">Agende sua primeira visita ou dê o próximo passo e faça parte da nossa família.</p>
+    </div>
+  </section>
+
+  <!-- AGENDAR VISITA -->
+  <section class="section visita-section" id="visita">
+    <div class="container">
+      <div class="visita-grid">
+
+        <!-- COLUNA ESQUERDA — texto -->
+        <div class="visita-info fade-up">
+          <span class="section__label">Venha nos conhecer</span>
+          <h2 class="section__title" style="text-align:left;">Agende sua<br/>Visita</h2>
+          <p class="visita-info__sub">
+            Você é muito bem-vindo! Preencha o formulário e enviaremos uma confirmação no seu e-mail com todos os detalhes do seu horário.
+          </p>
+
+          <ul class="visita-info__list">
+            <li>
+              <div class="visita-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Domingos</strong>
+                <span>9h · 11h · 18h</span>
+              </div>
+            </li>
+            <li>
+              <div class="visita-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Quarta-feira</strong>
+                <span>19h30</span>
+              </div>
+            </li>
+            <li>
+              <div class="visita-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Sexta-feira</strong>
+                <span>19h30</span>
+              </div>
+            </li>
+            <li>
+              <div class="visita-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Endereço</strong>
+                <span>Rua dos Passos, 185 — Taubaté, SP</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLUNA DIREITA — formulário -->
+        <div class="form-card fade-up">
+          <!-- Estado padrão: formulário -->
+          <form id="formVisita" class="form" novalidate>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="v-nome">Nome completo *</label>
+                <input class="form__input" type="text" id="v-nome" name="nome" placeholder="Seu nome" required />
+              </div>
+            </div>
+            <div class="form__row form__row--2">
+              <div class="form__group">
+                <label class="form__label" for="v-email">E-mail *</label>
+                <input class="form__input" type="email" id="v-email" name="email" placeholder="seu@email.com" required />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="v-tel">WhatsApp</label>
+                <input class="form__input" type="tel" id="v-tel" name="telefone" placeholder="(11) 99999-9999" />
+              </div>
+            </div>
+            <div class="form__row form__row--2">
+              <div class="form__group">
+                <label class="form__label" for="v-data">Data preferida *</label>
+                <input class="form__input" type="date" id="v-data" name="data" required />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="v-horario">Horário *</label>
+                <select class="form__input form__select" id="v-horario" name="horario" required>
+                  <option value="" disabled selected>Selecione</option>
+                  <optgroup label="Domingo">
+                    <option value="Domingo 9h">Domingo — 9h</option>
+                    <option value="Domingo 11h">Domingo — 11h</option>
+                    <option value="Domingo 18h">Domingo — 18h</option>
+                  </optgroup>
+                  <optgroup label="Meio de semana">
+                    <option value="Quarta 19h30">Quarta-feira — 19h30</option>
+                    <option value="Sexta 19h30">Sexta-feira — 19h30</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="v-msg">Mensagem (opcional)</label>
+              <textarea class="form__input form__textarea" id="v-msg" name="mensagem" placeholder="Algo que queira nos contar antecipadamente…" rows="3"></textarea>
+            </div>
+            <div class="form__error" id="v-error" aria-live="polite"></div>
+            <button type="submit" class="btn btn--primary btn--full" id="v-btn">
+              <span id="v-btn-label">Agendar Visita</span>
+              <svg id="v-spinner" class="form__spinner hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </button>
+          </form>
+
+          <!-- Estado sucesso -->
+          <div class="form-success hidden" id="v-success">
+            <div class="form-success__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Visita Agendada!</h3>
+            <p>Enviamos a confirmação para <strong id="v-success-email"></strong>. Estamos ansiosos para receber você!</p>
+            <button class="btn btn--outline" onclick="resetVisita()">Fazer outro agendamento</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBRESIA -->
+  <section class="section membresia-section" id="membresia">
+    <div class="container">
+      <div class="section__header fade-up">
+        <span class="section__label">Dê o próximo passo</span>
+        <h2 class="section__title">Seja Membro</h2>
+        <p class="section__subtitle">Fazer parte da nossa família significa crescer, servir e pertencer a uma comunidade.</p>
+      </div>
+
+      <div class="membresia-grid">
+
+        <!-- PASSOS -->
+        <div class="passos fade-up">
+          <h3 class="passos__titulo">Como se tornar membro</h3>
+          <ol class="passos__lista">
+            <li class="passo">
+              <div class="passo__num">1</div>
+              <div class="passo__content">
+                <strong>Frequente os cultos</strong>
+                <p>Participe regularmente dos cultos e conheça nossa comunidade de fé.</p>
+              </div>
+            </li>
+            <li class="passo">
+              <div class="passo__num">2</div>
+              <div class="passo__content">
+                <strong>Escola de Membros</strong>
+                <p>Participe da Escola de Membros (datas em breve) e aprenda sobre nossa visão, valores e compromissos.</p>
+              </div>
+            </li>
+            <li class="passo">
+              <div class="passo__num">3</div>
+              <div class="passo__content">
+                <strong>Entrevista pastoral</strong>
+                <p>Uma conversa breve com a liderança para compartilhar sua fé e trajetória.</p>
+              </div>
+            </li>
+            <li class="passo">
+              <div class="passo__num">4</div>
+              <div class="passo__content">
+                <strong>Celebração de boas-vindas</strong>
+                <p>Seja apresentado à congregação num culto especial. Você é família!</p>
+              </div>
+            </li>
+          </ol>
+
+          <blockquote class="passos__verso">
+            <p>"Assim nós, sendo muitos, somos um só corpo em Cristo, mas individualmente somos membros uns dos outros."</p>
+            <cite>Romanos 12:5</cite>
+          </blockquote>
+        </div>
+
+        <!-- FORMULÁRIO DE INTERESSE -->
+        <div class="form-card fade-up">
+          <div class="form-card__header">
+            <h3>Tenho interesse!</h3>
+            <p>Preencha e nossa liderança entrará em contato.</p>
+          </div>
+
+          <form id="formMembro" class="form" novalidate>
+            <div class="form__group">
+              <label class="form__label" for="m-nome">Nome completo *</label>
+              <input class="form__input" type="text" id="m-nome" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form__row form__row--2">
+              <div class="form__group">
+                <label class="form__label" for="m-email">E-mail *</label>
+                <input class="form__input" type="email" id="m-email" name="email" placeholder="seu@email.com" required />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="m-tel">WhatsApp</label>
+                <input class="form__input" type="tel" id="m-tel" name="telefone" placeholder="(11) 99999-9999" />
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label">Já frequenta a igreja?</label>
+              <div class="form__radio-group">
+                <label class="form__radio">
+                  <input type="radio" name="frequenta" value="sim" />
+                  <span>Sim, já frequento</span>
+                </label>
+                <label class="form__radio">
+                  <input type="radio" name="frequenta" value="nao" />
+                  <span>Ainda não</span>
+                </label>
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="m-msg">Mensagem (opcional)</label>
+              <textarea class="form__input form__textarea" id="m-msg" name="mensagem" placeholder="Conte um pouco da sua história…" rows="3"></textarea>
+            </div>
+            <div class="form__error" id="m-error" aria-live="polite"></div>
+            <button type="submit" class="btn btn--primary btn--full" id="m-btn">
+              <span id="m-btn-label">Enviar Interesse</span>
+              <svg id="m-spinner" class="form__spinner hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </button>
+          </form>
+
+          <!-- Estado sucesso -->
+          <div class="form-success hidden" id="m-success">
+            <div class="form-success__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Recebemos seu interesse!</h3>
+            <p>Nossa equipe pastoral entrará em contato em breve. Seja bem-vindo(a) à família <strong>+500</strong>!</p>
+            <button class="btn btn--outline" onclick="resetMembro()">Voltar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo-light.svg" alt="Igreja Batista +500" class="footer__logo" />
+          <p>Amando a Deus e ao próximo,<br />a cada dia.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#cultos">Cultos</a></li>
+            <li><a href="index.html#ministerios">Ministérios</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="membros.html">Membros</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Membros</h4>
+          <ul>
+            <li><a href="#visita">Agendar Visita</a></li>
+            <li><a href="#membresia">Membresia</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contato</h4>
+          <p>Rua dos Passos, 185<br />Taubaté — SP</p>
+          <p>(11) 99999-9999</p>
+          <p>contato@igrejamais500.com.br</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Igreja Batista +500. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/membros.js"></script>
+</body>
+</html>
