@@ -89,9 +89,9 @@ const vBtn       = document.getElementById('v-btn');
 const vBtnLabel  = document.getElementById('v-btn-label');
 const vSpinner   = document.getElementById('v-spinner');
 
-vBtnLabel.dataset.original = vBtnLabel.textContent;
+if (vBtnLabel) vBtnLabel.dataset.original = vBtnLabel.textContent;
 
-formVisita.addEventListener('submit', async (e) => {
+if (formVisita) formVisita.addEventListener('submit', async (e) => {
   e.preventDefault();
   clearError(vError);
 
@@ -142,10 +142,9 @@ formVisita.addEventListener('submit', async (e) => {
 });
 
 function resetVisita() {
-  formVisita.reset();
-  formVisita.style.display = '';
-  vSuccess.classList.add('hidden');
-  clearError(vError);
+  if (formVisita) { formVisita.reset(); formVisita.style.display = ''; }
+  if (vSuccess) vSuccess.classList.add('hidden');
+  if (vError) clearError(vError);
 }
 
 // ========================
